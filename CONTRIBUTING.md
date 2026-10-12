@@ -2,6 +2,10 @@
 
 Mortal Kommit is a TypeScript CLI and browser arena. Buzz owns the reviewer conversation; this application prepares source, observes messages, and presents evidence-backed combat.
 
+## Submitting changes
+
+Fork the repository, create a branch in your fork, and open a pull request against `master`. Contributions and reviews are welcome. Only [@phillamb168](https://github.com/phillamb168) can merge pull requests or create, update, or delete branches and tags in the upstream repository; GitHub rulesets enforce these restrictions. They do not restrict branches or commits in your own fork.
+
 ## Local development
 
 Use Node 22.13+ and npm. Live Buzz reviews are currently verified on macOS with Buzz 0.5.23; demo, core tests, and browser development do not require Buzz, GitHub, GitLab, or model credentials.
