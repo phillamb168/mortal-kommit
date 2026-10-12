@@ -1,0 +1,290 @@
+{
+  "version": 1,
+  "name": "claude",
+  "image": "claude.png",
+  "width": 1254,
+  "height": 1254,
+  "facing": "right",
+  "license": "MIT",
+  "frames": [
+    {
+      "x": 0,
+      "y": 0,
+      "w": 314,
+      "h": 314,
+      "pivotX": 157,
+      "pivotY": 306,
+      "hurt": {
+        "x": 165,
+        "y": 85
+      }
+    },
+    {
+      "x": 314,
+      "y": 0,
+      "w": 313,
+      "h": 314,
+      "pivotX": 156.5,
+      "pivotY": 306,
+      "hurt": {
+        "x": 165,
+        "y": 85
+      }
+    },
+    {
+      "x": 627,
+      "y": 0,
+      "w": 314,
+      "h": 314,
+      "pivotX": 157,
+      "pivotY": 306,
+      "hurt": {
+        "x": 165,
+        "y": 85
+      }
+    },
+    {
+      "x": 941,
+      "y": 0,
+      "w": 313,
+      "h": 314,
+      "pivotX": 156.5,
+      "pivotY": 306,
+      "hurt": {
+        "x": 165,
+        "y": 85
+      }
+    },
+    {
+      "x": 0,
+      "y": 314,
+      "w": 314,
+      "h": 313,
+      "pivotX": 157,
+      "pivotY": 305,
+      "hurt": {
+        "x": 165,
+        "y": 85
+      }
+    },
+    {
+      "x": 314,
+      "y": 314,
+      "w": 313,
+      "h": 313,
+      "pivotX": 156.5,
+      "pivotY": 305,
+      "hurt": {
+        "x": 165,
+        "y": 85
+      },
+      "contact": {
+        "x": 293,
+        "y": 78
+      }
+    },
+    {
+      "x": 627,
+      "y": 314,
+      "w": 314,
+      "h": 313,
+      "pivotX": 157,
+      "pivotY": 305,
+      "hurt": {
+        "x": 165,
+        "y": 85
+      },
+      "contact": {
+        "x": 297,
+        "y": 64
+      }
+    },
+    {
+      "x": 941,
+      "y": 314,
+      "w": 313,
+      "h": 313,
+      "pivotX": 156.5,
+      "pivotY": 305,
+      "hurt": {
+        "x": 113,
+        "y": 76
+      }
+    },
+    {
+      "x": 0,
+      "y": 627,
+      "w": 314,
+      "h": 314,
+      "pivotX": 157,
+      "pivotY": 306,
+      "hurt": {
+        "x": 165,
+        "y": 85
+      },
+      "contact": {
+        "x": 215,
+        "y": 94
+      }
+    },
+    {
+      "x": 314,
+      "y": 627,
+      "w": 313,
+      "h": 314,
+      "pivotX": 156.5,
+      "pivotY": 306,
+      "hurt": {
+        "x": 165,
+        "y": 85
+      },
+      "contact": {
+        "x": 302,
+        "y": 84
+      }
+    },
+    {
+      "x": 627,
+      "y": 627,
+      "w": 314,
+      "h": 314,
+      "pivotX": 157,
+      "pivotY": 306,
+      "hurt": {
+        "x": 165,
+        "y": 85
+      }
+    },
+    {
+      "x": 941,
+      "y": 627,
+      "w": 313,
+      "h": 314,
+      "pivotX": 156.5,
+      "pivotY": 306,
+      "hurt": {
+        "x": 165,
+        "y": 85
+      },
+      "contact": {
+        "x": 192,
+        "y": 24
+      }
+    },
+    {
+      "x": 0,
+      "y": 941,
+      "w": 314,
+      "h": 313,
+      "pivotX": 157,
+      "pivotY": 305,
+      "hurt": {
+        "x": 165,
+        "y": 85
+      }
+    },
+    {
+      "x": 314,
+      "y": 941,
+      "w": 313,
+      "h": 313,
+      "pivotX": 156.5,
+      "pivotY": 305,
+      "hurt": {
+        "x": 165,
+        "y": 85
+      }
+    },
+    {
+      "x": 627,
+      "y": 941,
+      "w": 314,
+      "h": 313,
+      "pivotX": 157,
+      "pivotY": 305,
+      "hurt": {
+        "x": 165,
+        "y": 85
+      }
+    },
+    {
+      "x": 941,
+      "y": 941,
+      "w": 313,
+      "h": 313,
+      "pivotX": 156.5,
+      "pivotY": 305,
+      "hurt": {
+        "x": 165,
+        "y": 85
+      }
+    }
+  ],
+  "animations": {
+    "idle": {
+      "frames": [0, 1, 0, 2],
+      "durations": [360, 220, 360, 220],
+      "loop": true
+    },
+    "fatigue": {
+      "frames": [3, 0, 3, 2],
+      "durations": [450, 180, 450, 180],
+      "loop": true
+    },
+    "attack": {
+      "frames": [4, 5, 5, 0],
+      "durations": [140, 100, 170, 160],
+      "loop": false
+    },
+    "kick": {
+      "frames": [4, 6, 0],
+      "durations": [150, 230, 150],
+      "loop": false
+    },
+    "hit": {
+      "frames": [7, 7, 0],
+      "durations": [170, 160, 180],
+      "loop": false
+    },
+    "block": {
+      "frames": [8, 8, 0],
+      "durations": [160, 200, 120],
+      "loop": false
+    },
+    "parry": {
+      "frames": [9, 8, 0],
+      "durations": [180, 160, 150],
+      "loop": false
+    },
+    "recoil": {
+      "frames": [7, 10, 0],
+      "durations": [140, 260, 180],
+      "loop": false
+    },
+    "special": {
+      "frames": [12, 11, 11, 12, 0],
+      "durations": [140, 190, 240, 180, 180],
+      "loop": false
+    },
+    "victory": {
+      "frames": [13, 14],
+      "durations": [500, 900],
+      "loop": true
+    },
+    "defeat": {
+      "frames": [7, 15],
+      "durations": [200, 1200],
+      "loop": false
+    },
+    "scouting": {
+      "frames": [14, 0],
+      "durations": [900, 300],
+      "loop": true
+    },
+    "finisher": {
+      "frames": [12, 9, 11, 13],
+      "durations": [700, 180, 900, 1000],
+      "loop": false
+    }
+  }
+}

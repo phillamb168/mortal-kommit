@@ -1,0 +1,16 @@
+# Only application build inputs enter the Docker context.
+*
+!package.json
+!package-lock.json
+!tsconfig.json
+!src/
+!src/**
+!scripts/
+!scripts/build.mjs
+!assets/
+!assets/**
+!docs/
+!docs/deploy/
+!docs/deploy/Dockerfile
+!LICENSE
+!THIRD_PARTY_NOTICES.md

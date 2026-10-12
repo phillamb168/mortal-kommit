@@ -1,0 +1,73 @@
+{
+  "name": "mortal-kommit",
+  "version": "0.1.0",
+  "description": "Shared GitHub and GitLab code reviews through Buzz, visualized as an arcade fight.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "bin": {
+    "mortal-kommit": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "assets",
+    "docs",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "SECURITY.md",
+    "THIRD_PARTY_NOTICES.md",
+    "CONTRIBUTING.md"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "demo": "node dist/cli.js --demo",
+    "prepack": "npm run build",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "npm run format:check && npm run typecheck && npm test && npm run build && node dist/cli.js assets validate",
+    "release:check": "npm run check && node scripts/release-check.mjs"
+  },
+  "dependencies": {
+    "@noble/curves": "^2.0.1",
+    "@noble/hashes": "^2.0.1",
+    "nostr-tools": "2.25.2",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "ws": "^8.18.3",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@types/ws": "^8.18.1",
+    "esbuild": "0.28.2",
+    "prettier": "3.9.10",
+    "sharp": "0.35.5",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "author": "phillamb168",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phillamb168/mortal-kommit.git"
+  },
+  "homepage": "https://github.com/phillamb168/mortal-kommit#readme",
+  "bugs": {
+    "url": "https://github.com/phillamb168/mortal-kommit/issues"
+  },
+  "keywords": [
+    "buzz",
+    "code-review",
+    "github",
+    "gitlab",
+    "claude",
+    "codex",
+    "arcade"
+  ]
+}
