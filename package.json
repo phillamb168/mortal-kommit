@@ -24,12 +24,13 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "typecheck": "tsc --noEmit",
+    "pretest": "npm run build",
     "test": "tsx --test tests/*.test.ts",
     "demo": "node dist/cli.js --demo",
     "prepack": "npm run build",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "check": "npm run format:check && npm run typecheck && npm test && npm run build && node dist/cli.js assets validate",
+    "check": "npm run format:check && npm run typecheck && npm test && node dist/cli.js assets validate",
     "release:check": "npm run check && node scripts/release-check.mjs"
   },
   "dependencies": {

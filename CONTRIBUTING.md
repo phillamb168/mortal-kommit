@@ -22,7 +22,7 @@ npm run check
 npm run release:check
 ```
 
-`release:check` also inspects package contents and high-confidence secret patterns. It does not publish anything. `scripts/model-smoke.ts` is an explicitly opt-in, billable model smoke test; it is not part of CI.
+`npm test` builds the application before running the suite: the HTTP integration tests serve the generated browser files from `dist/web`. Both `check` and `release:check` include that prerequisite, so they work from a fresh checkout without an existing `dist` directory. `release:check` also inspects package contents and high-confidence secret patterns. It does not publish anything. `scripts/model-smoke.ts` is an explicitly opt-in, billable model smoke test; it is not part of CI.
 
 ## Code map
 

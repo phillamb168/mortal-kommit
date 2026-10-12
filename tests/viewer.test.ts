@@ -141,7 +141,10 @@ test('permanent viewer serves authenticated replay, exports and streaming; rejec
       const token = new URLSearchParams(url.hash.slice(1)).get('session')!;
       assert.notEqual(token, s.token);
       assert.equal((await stat(join(dir, 'viewer-key.json'))).mode & 0o777, 0o600);
-      assert.equal((await browse('/')).status, 200);
+      const home = await browse('/');
+      const homeBody = await home.text();
+      assert.equal(home.status, 200, `Viewer did not serve the browser app: ${homeBody}`);
+      assert.match(homeBody, /<title>Mortal Kommit/);
       assert.match(await browse('/main.js').then((r) => r.text()), /Mortal Kommit/);
       assert.equal((await browse('/assets/claude.png')).status, 200);
       assert.equal((await browse('/healthz')).status, 200);

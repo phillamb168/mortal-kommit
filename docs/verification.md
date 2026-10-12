@@ -1,6 +1,6 @@
 # Verification and limits
 
-Tested locally on macOS, Node 22.23.1, Buzz 0.5.23 and its installed Claude/Codex ACP adapters. Latest verification: October 12, 2026. The web runtime was also built and exercised in the supplied Linux container. CI is configured for macOS/Linux and Node 22/24; those hosted matrix jobs have not run before the first push.
+Tested locally on macOS, Node 22.23.1, Buzz 0.5.23 and its installed Claude/Codex ACP adapters. Latest verification: October 12, 2026. The web runtime was also built and exercised in the supplied Linux container. CI targets macOS/Linux and Node 22/24. The first hosted run exposed a missing build prerequisite in the viewer integration test; `npm test` now builds the application before running the suite.
 
 ## Reproducible checks
 
@@ -9,7 +9,9 @@ npm ci
 npm run release:check
 ```
 
-The suite uses temporary Git repositories, fixture GitHub/GitLab responses, signed Nostr events, encrypted owner telemetry, SQLite, an actual capability-proxy subprocess and a loopback HTTP server. No credentials or model calls are required. Package validation includes both sprite atlases, distribution file inventory and high-confidence credential patterns.
+The suite uses temporary Git repositories, fixture GitHub/GitLab responses, signed Nostr events, encrypted owner telemetry, SQLite, an actual capability-proxy subprocess and a loopback HTTP server. No credentials or model calls are required. `npm test` runs the build first so the viewer can serve `dist/web` even on a clean checkout; no pre-existing build artifacts are needed. Package validation includes both sprite atlases, distribution file inventory and high-confidence credential patterns.
+
+The corrected pipeline passed `npm ci` and `npm run release:check` from four clean source copies with no `dist` or `node_modules`: Node 22 and 24 on macOS, and Node 22 and 24 in Linux containers. All 86 tests, asset validation and package checks passed in each configuration. These are local reproductions; hosted Actions results are recorded on the corresponding GitHub commit.
 
 Coverage includes:
 
